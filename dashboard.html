@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      #send-cash-btn {
+        color: #fff;
+        background-color: dodgerblue;
+        padding: 10px 20px;
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      #send-cash-btn:disabled {
+        background-color: #eee;
+        color: #000;
+        cursor: no-drop;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <span>Welcome to your dashboard.</span>
+        <span id="account-number"></span>
+      </div>
+
+      <!-- SHOW ACCOUNT NUMBER -->
+      <button id="logout-btn">Log out</button>
+    </div>
+
+    <h4>Transfer Cash</h4>
+    <div style="margin-bottom: 10px">
+      Select the person you want to send money to
+    </div>
+    <select id="select-dropdown">
+      <!-- insert options here -->
+      <option value="" selected disabled>select a recipient</option>
+    </select>
+    <br />
+    <br />
+
+    <label for="amount">enter amount:</label>
+    <input type="number" id="amount" required />
+    <br />
+    <br />
+    <button id="send-cash-btn">Send</button>
+
+    <script src="/dashboard.js"></script>
+  </body>
+</html>
